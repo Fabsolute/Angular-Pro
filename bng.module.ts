@@ -1,6 +1,6 @@
 import {QuickTableComponent} from './components/quick-table/quick-table.component';
 import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {BrowserModule} from '@angular/platform-browser';
 import {QuickTableColumnDirective} from './components/quick-table/quick-table-column.directive';
@@ -12,6 +12,11 @@ import {PaginationComponent} from './components/pagination/pagination.component'
 import {SmartTableComponent} from './components/smart-table/smart-table.component';
 import {LoaderComponent} from './components/loader/loader.component';
 import {RouterModule} from "@angular/router";
+import {QuickFormComponent} from "./components/quick-form/components/quick-form/quick-form.component";
+import {QuickFormInputComponent} from "./components/quick-form/components/quick-form-input/quick-form-input.component";
+import {QuickFormSelectComponent} from "./components/quick-form/components/quick-form-select/quick-form-select.component";
+import {QuickFormTextareaComponent} from "./components/quick-form/components/quick-form-textarea/quick-form-textarea.component";
+import {QuickFormButtonsComponent} from "./components/quick-form/components/quick-form-buttons/quick-form-buttons.component";
 
 @NgModule({
     declarations: [
@@ -22,12 +27,18 @@ import {RouterModule} from "@angular/router";
         QuickSelectItemDirective,
         PaginationComponent,
         SmartTableComponent,
-        LoaderComponent
+        LoaderComponent,
+        QuickFormComponent,
+        QuickFormInputComponent,
+        QuickFormSelectComponent,
+        QuickFormTextareaComponent,
+        QuickFormButtonsComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
         CommonModule,
+        ReactiveFormsModule,
         RepeatModule,
         RouterModule
     ],
@@ -38,7 +49,12 @@ import {RouterModule} from "@angular/router";
         QuickSelectComponent,
         QuickSelectItemDirective,
         PaginationComponent,
-        SmartTableComponent
+        SmartTableComponent,
+        QuickFormComponent,
+        QuickFormInputComponent,
+        QuickFormSelectComponent,
+        QuickFormTextareaComponent,
+        QuickFormButtonsComponent
     ]
 })
 export class BNGModule {
