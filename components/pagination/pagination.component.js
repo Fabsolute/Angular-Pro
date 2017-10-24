@@ -82,28 +82,28 @@ var PaginationComponent = (function () {
     PaginationComponent.prototype.fireOnPageChanged = function (params) {
         this.current_page_changed.emit(params);
     };
+    __decorate([
+        core_1.Output('onPageChanged')
+    ], PaginationComponent.prototype, "current_page_changed", void 0);
+    __decorate([
+        core_1.Input('total-item-count')
+    ], PaginationComponent.prototype, "total_item_count", void 0);
+    __decorate([
+        core_1.Input('max-shown-page-count')
+    ], PaginationComponent.prototype, "max_shown_page_count", void 0);
+    __decorate([
+        core_1.Input('item-count-per-page')
+    ], PaginationComponent.prototype, "item_count_per_page", null);
+    __decorate([
+        core_1.Input('current-page')
+    ], PaginationComponent.prototype, "current_page", null);
+    PaginationComponent = __decorate([
+        core_1.Component({
+            selector: 'pagination',
+            templateUrl: './pagination.component.html',
+            styleUrls: ['./pagination.component.css']
+        })
+    ], PaginationComponent);
     return PaginationComponent;
 }());
-__decorate([
-    core_1.Output('onPageChanged')
-], PaginationComponent.prototype, "current_page_changed", void 0);
-__decorate([
-    core_1.Input('total-item-count')
-], PaginationComponent.prototype, "total_item_count", void 0);
-__decorate([
-    core_1.Input('max-shown-page-count')
-], PaginationComponent.prototype, "max_shown_page_count", void 0);
-__decorate([
-    core_1.Input('item-count-per-page')
-], PaginationComponent.prototype, "item_count_per_page", null);
-__decorate([
-    core_1.Input('current-page')
-], PaginationComponent.prototype, "current_page", null);
-PaginationComponent = __decorate([
-    core_1.Component({
-        selector: 'pagination',
-        templateUrl: './pagination.component.html',
-        styleUrls: ['./pagination.component.css']
-    })
-], PaginationComponent);
 exports.PaginationComponent = PaginationComponent;
