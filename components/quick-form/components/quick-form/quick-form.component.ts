@@ -1,5 +1,5 @@
 import {Component, Input, OnDestroy} from '@angular/core';
-import {ComponentBase} from '../base.component';
+import {ComponentBase} from '../../../base.component';
 import {FormGroup} from '@angular/forms';
 import * as Rx from 'rxjs/Rx';
 import {QuickFormService} from '../../services/quick-form.service';
@@ -23,8 +23,11 @@ export class QuickFormComponent extends ComponentBase implements OnDestroy {
         }));
     }
 
-    onSubmit() {
-        console.log(this.quick_form);
+    onSubmit(event) {
+        event.preventDefault();
+        if (this.quick_form.dirty && this.quick_form.valid) {
+            console.log(this.quick_form);
+        }
     }
 
     ngOnDestroy() {

@@ -1,6 +1,6 @@
 import 'rxjs/add/operator/toPromise';
 import * as Rx from 'rxjs/Rx';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormArray, FormControl, FormGroup, Validators} from '@angular/forms';
 
 export class QuickFormService {
 
@@ -17,4 +17,10 @@ export class QuickFormService {
         this.formGroup.addControl(control.value, control);
         this.quickFromSubject.next(this.formGroup);
     }
+
+    toFormArray(control: FormArray) {
+        this.formGroup.addControl(control.value, control);
+        this.quickFromSubject.next(this.formGroup);
+    }
+
 }
