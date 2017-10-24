@@ -1,6 +1,6 @@
 
-<!--<div class="form-group" [ngClass]="options.class">-->
-    <!--<label class="form-control-label">{{options.label}}</label>-->
-    <!--<textarea  [ngClass]="options.control_class" [value]="options.value" [formControl]="control"></textarea>-->
-
-<!--</div>-->
+<div class="form-group">
+    <label class="form-control-label">{{label}}</label>
+    <textarea  [ngClass]="class" [value]="value" [formControl]="control"></textarea>
+    <quick-form-validation [control]="control"></quick-form-validation>
+</div>
