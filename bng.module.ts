@@ -12,11 +12,7 @@ import {PaginationComponent} from './components/pagination/pagination.component'
 import {SmartTableComponent} from './components/smart-table/smart-table.component';
 import {LoaderComponent} from './components/loader/loader.component';
 import {RouterModule} from "@angular/router";
-import {QuickFormComponent} from "./components/quick-form/components/quick-form/quick-form.component";
-import {QuickFormInputComponent} from "./components/quick-form/components/quick-form-input/quick-form-input.component";
-import {QuickFormSelectComponent} from "./components/quick-form/components/quick-form-select/quick-form-select.component";
-import {QuickFormTextareaComponent} from "./components/quick-form/components/quick-form-textarea/quick-form-textarea.component";
-import {QuickFormButtonsComponent} from "./components/quick-form/components/quick-form-buttons/quick-form-buttons.component";
+import {QuickFormModule} from './components/quick-form/quick-form.module';
 
 @NgModule({
     declarations: [
@@ -28,11 +24,7 @@ import {QuickFormButtonsComponent} from "./components/quick-form/components/quic
         PaginationComponent,
         SmartTableComponent,
         LoaderComponent,
-        QuickFormComponent,
-        QuickFormInputComponent,
-        QuickFormSelectComponent,
-        QuickFormTextareaComponent,
-        QuickFormButtonsComponent
+
     ],
     imports: [
         BrowserModule,
@@ -40,7 +32,8 @@ import {QuickFormButtonsComponent} from "./components/quick-form/components/quic
         CommonModule,
         ReactiveFormsModule,
         RepeatModule,
-        RouterModule
+        RouterModule,
+        QuickFormModule
     ],
     exports: [
         QuickTableComponent,
@@ -50,11 +43,6 @@ import {QuickFormButtonsComponent} from "./components/quick-form/components/quic
         QuickSelectItemDirective,
         PaginationComponent,
         SmartTableComponent,
-        QuickFormComponent,
-        QuickFormInputComponent,
-        QuickFormSelectComponent,
-        QuickFormTextareaComponent,
-        QuickFormButtonsComponent
     ]
 })
 export class BNGModule {
