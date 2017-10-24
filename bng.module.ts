@@ -1,6 +1,6 @@
 import {QuickTableComponent} from './components/quick-table/quick-table.component';
 import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {BrowserModule} from '@angular/platform-browser';
 import {QuickTableColumnDirective} from './components/quick-table/quick-table-column.directive';
@@ -12,6 +12,7 @@ import {PaginationComponent} from './components/pagination/pagination.component'
 import {SmartTableComponent} from './components/smart-table/smart-table.component';
 import {LoaderComponent} from './components/loader/loader.component';
 import {RouterModule} from "@angular/router";
+import {QuickFormModule} from './components/quick-form/quick-form.module';
 
 @NgModule({
     declarations: [
@@ -22,14 +23,17 @@ import {RouterModule} from "@angular/router";
         QuickSelectItemDirective,
         PaginationComponent,
         SmartTableComponent,
-        LoaderComponent
+        LoaderComponent,
+
     ],
     imports: [
         BrowserModule,
         FormsModule,
         CommonModule,
+        ReactiveFormsModule,
         RepeatModule,
-        RouterModule
+        RouterModule,
+        QuickFormModule
     ],
     exports: [
         QuickTableComponent,
@@ -38,7 +42,7 @@ import {RouterModule} from "@angular/router";
         QuickSelectComponent,
         QuickSelectItemDirective,
         PaginationComponent,
-        SmartTableComponent
+        SmartTableComponent,
     ]
 })
 export class BNGModule {

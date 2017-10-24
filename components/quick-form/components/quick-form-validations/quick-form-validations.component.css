@@ -1,0 +1,11 @@
+.form_validation_message {
+    color: #ea6035;
+    font-style: italic;
+    font-size: 13px;
+    padding: 3px;
+    position: absolute;
+    pointer-events: none;
+    cursor: text;
+    top: 37px;
+    right: 42px;
+}
