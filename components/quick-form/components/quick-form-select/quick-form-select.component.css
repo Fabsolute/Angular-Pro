@@ -1,0 +1,20 @@
+select{
+    -webkit-appearance: button;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    border: 1px solid #aaa;
+    border: 1px solid #cfd8dc;
+    color: #555;
+    font-size: inherit;
+    overflow: hidden;
+    padding: 3px 10px;
+    text-overflow: ellipsis;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFklEQVRYR+2UPU7DQBCF33AEm6vQpMY+SBy6BBQsAQUFiAoSIYJS2j5IvDXiMt4j8JCDEoiF4vWP5Gbc7uq9b78ZWTDwJwP3QwHUgBpQA2rAyYAXXozArzObpyuXX7cXjK/Bkw9rks+6+04A/nn0BME9wdjm2euxUD+IbgA8k3ywJnvsBQCAeMF4IZCY5Nya7O2/4NNgEhNcAngp8vQOAPsCKHP2EBC5KjbJ+99wL4zmQpR2nMu3oXWElfNfCGJWmHRdnvvh5BLkipSFNcmty8t3uU0BDk1Apj9BXLcpb2NgD77biW29YGk3abl8tTOvGm9j4AACImxb3sVAdYSNX95lBxru7fHrXUbQC4gCqAE1oAYGN/ANELlfITA1Xh8AAAAASUVORK5CYII=") !important;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    line-height: 19px!important;
+    background-size: 25px;
+}
