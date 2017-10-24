@@ -18,29 +18,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var base_component_1 = require("../base.component");
-var BadgeComponent = BadgeComponent_1 = (function (_super) {
+var BadgeComponent = (function (_super) {
     __extends(BadgeComponent, _super);
     function BadgeComponent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    BadgeComponent_1 = BadgeComponent;
+    __decorate([
+        core_1.Input('background-color')
+    ], BadgeComponent.prototype, "background_color", void 0);
+    __decorate([
+        core_1.Input()
+    ], BadgeComponent.prototype, "color", void 0);
+    __decorate([
+        core_1.Input()
+    ], BadgeComponent.prototype, "href", void 0);
+    BadgeComponent = BadgeComponent_1 = __decorate([
+        core_1.Component({
+            selector: 'badge',
+            templateUrl: 'badge.component.html',
+            styleUrls: ['badge.component.css'],
+            providers: [{ provide: base_component_1.ComponentBase, useExisting: BadgeComponent_1 }]
+        })
+    ], BadgeComponent);
     return BadgeComponent;
+    var BadgeComponent_1;
 }(base_component_1.ComponentBase));
-__decorate([
-    core_1.Input('background-color')
-], BadgeComponent.prototype, "background_color", void 0);
-__decorate([
-    core_1.Input()
-], BadgeComponent.prototype, "color", void 0);
-__decorate([
-    core_1.Input()
-], BadgeComponent.prototype, "href", void 0);
-BadgeComponent = BadgeComponent_1 = __decorate([
-    core_1.Component({
-        selector: 'badge',
-        templateUrl: 'badge.component.html',
-        styleUrls: ['badge.component.css'],
-        providers: [{ provide: base_component_1.ComponentBase, useExisting: BadgeComponent_1 }]
-    })
-], BadgeComponent);
 exports.BadgeComponent = BadgeComponent;
-var BadgeComponent_1;
