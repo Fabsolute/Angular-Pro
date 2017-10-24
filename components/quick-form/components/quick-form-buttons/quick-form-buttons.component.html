@@ -1,7 +1,6 @@
-<!--<div class="form-group" [ngClass]="class">-->
-    <!--<button [ngClass]="button_class">{{text}}</button>-->
-<!--</div>-->
+
 <div class="col-md-12">
-    <button>test</button>
+    <button  [disabled]="!quick_form_service.formGroup.valid" [class]="'btn '+class" [innerHTML]="text"></button>
+    <div class="clearfix"></div>
 </div>
 
