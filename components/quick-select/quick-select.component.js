@@ -20,7 +20,7 @@ var core_1 = require("@angular/core");
 var base_component_1 = require("../base.component");
 var quick_select_item_directive_1 = require("./quick-select-item.directive");
 var forms_1 = require("@angular/forms");
-var QuickSelectComponent = QuickSelectComponent_1 = (function (_super) {
+var QuickSelectComponent = (function (_super) {
     __extends(QuickSelectComponent, _super);
     function QuickSelectComponent() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
@@ -29,6 +29,7 @@ var QuickSelectComponent = QuickSelectComponent_1 = (function (_super) {
         _this.is_disabled = false;
         return _this;
     }
+    QuickSelectComponent_1 = QuickSelectComponent;
     QuickSelectComponent.prototype.ngOnInit = function () {
         this.selected_item = "all";
     };
@@ -63,39 +64,39 @@ var QuickSelectComponent = QuickSelectComponent_1 = (function (_super) {
         this.onChange(this.selected_item);
         // console.log('selected_item', this.selected_item);
     };
+    __decorate([
+        core_1.Input()
+    ], QuickSelectComponent.prototype, "source", void 0);
+    __decorate([
+        core_1.Input('name-selector')
+    ], QuickSelectComponent.prototype, "name_selector", void 0);
+    __decorate([
+        core_1.Input('value')
+    ], QuickSelectComponent.prototype, "default_value", void 0);
+    __decorate([
+        core_1.Output('item-selected')
+    ], QuickSelectComponent.prototype, "item_selected", void 0);
+    __decorate([
+        core_1.ContentChildren(quick_select_item_directive_1.QuickSelectItemDirective)
+    ], QuickSelectComponent.prototype, "item_list", void 0);
+    QuickSelectComponent = QuickSelectComponent_1 = __decorate([
+        core_1.Component({
+            selector: 'quick-select',
+            templateUrl: 'quick-select.component.html',
+            providers: [
+                {
+                    provide: base_component_1.ComponentBase,
+                    useExisting: QuickSelectComponent_1
+                },
+                {
+                    provide: forms_1.NG_VALUE_ACCESSOR,
+                    useExisting: QuickSelectComponent_1,
+                    multi: true
+                }
+            ]
+        })
+    ], QuickSelectComponent);
     return QuickSelectComponent;
+    var QuickSelectComponent_1;
 }(base_component_1.ComponentBase));
-__decorate([
-    core_1.Input()
-], QuickSelectComponent.prototype, "source", void 0);
-__decorate([
-    core_1.Input('name-selector')
-], QuickSelectComponent.prototype, "name_selector", void 0);
-__decorate([
-    core_1.Input('value')
-], QuickSelectComponent.prototype, "default_value", void 0);
-__decorate([
-    core_1.Output('item-selected')
-], QuickSelectComponent.prototype, "item_selected", void 0);
-__decorate([
-    core_1.ContentChildren(quick_select_item_directive_1.QuickSelectItemDirective)
-], QuickSelectComponent.prototype, "item_list", void 0);
-QuickSelectComponent = QuickSelectComponent_1 = __decorate([
-    core_1.Component({
-        selector: 'quick-select',
-        templateUrl: 'quick-select.component.html',
-        providers: [
-            {
-                provide: base_component_1.ComponentBase,
-                useExisting: QuickSelectComponent_1
-            },
-            {
-                provide: forms_1.NG_VALUE_ACCESSOR,
-                useExisting: QuickSelectComponent_1,
-                multi: true
-            }
-        ]
-    })
-], QuickSelectComponent);
 exports.QuickSelectComponent = QuickSelectComponent;
-var QuickSelectComponent_1;
