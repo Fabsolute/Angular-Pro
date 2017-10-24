@@ -10,12 +10,12 @@ var core_1 = require("@angular/core");
 var LoaderComponent = (function () {
     function LoaderComponent() {
     }
+    LoaderComponent = __decorate([
+        core_1.Component({
+            selector: 'smart-loader',
+            templateUrl: './loader.component.html'
+        })
+    ], LoaderComponent);
     return LoaderComponent;
 }());
-LoaderComponent = __decorate([
-    core_1.Component({
-        selector: 'smart-loader',
-        templateUrl: './loader.component.html'
-    })
-], LoaderComponent);
 exports.LoaderComponent = LoaderComponent;
