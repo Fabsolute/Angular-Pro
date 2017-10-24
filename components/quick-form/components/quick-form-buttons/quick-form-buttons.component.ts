@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ComponentBase} from '../base.component';
+import {ComponentBase} from '../../../base.component';
 import {QuickFormButton} from './quick-form-button';
 import {QuickFormService} from '../../services/quick-form.service';
 
@@ -12,14 +12,15 @@ import {QuickFormService} from '../../services/quick-form.service';
 })
 export class QuickFormButtonsComponent extends ComponentBase implements OnInit {
 
-    @Input() protected options: QuickFormButton;
+    @Input() protected text: string;
+    @Input() protected class: string;
 
     constructor(public quick_form_service: QuickFormService) {
         super();
     }
 
     ngOnInit() {
-        console.log(this.options);
+        // console.log(this.options);
         // if (this.options) {
         //     this.control = new FormControl(this.options.form_control_name,
         //         [Validators.required,
