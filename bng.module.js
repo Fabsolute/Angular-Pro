@@ -20,55 +20,42 @@ var pagination_component_1 = require("./components/pagination/pagination.compone
 var smart_table_component_1 = require("./components/smart-table/smart-table.component");
 var loader_component_1 = require("./components/loader/loader.component");
 var router_1 = require("@angular/router");
-var quick_form_component_1 = require("./components/quick-form/components/quick-form/quick-form.component");
-var quick_form_input_component_1 = require("./components/quick-form/components/quick-form-input/quick-form-input.component");
-var quick_form_select_component_1 = require("./components/quick-form/components/quick-form-select/quick-form-select.component");
-var quick_form_textarea_component_1 = require("./components/quick-form/components/quick-form-textarea/quick-form-textarea.component");
-var quick_form_buttons_component_1 = require("./components/quick-form/components/quick-form-buttons/quick-form-buttons.component");
+var quick_form_module_1 = require("./components/quick-form/quick-form.module");
 var BNGModule = (function () {
     function BNGModule() {
     }
+    BNGModule = __decorate([
+        core_1.NgModule({
+            declarations: [
+                quick_table_component_1.QuickTableComponent,
+                quick_table_column_directive_1.QuickTableColumnDirective,
+                badge_component_1.BadgeComponent,
+                quick_select_component_1.QuickSelectComponent,
+                quick_select_item_directive_1.QuickSelectItemDirective,
+                pagination_component_1.PaginationComponent,
+                smart_table_component_1.SmartTableComponent,
+                loader_component_1.LoaderComponent,
+            ],
+            imports: [
+                platform_browser_1.BrowserModule,
+                forms_1.FormsModule,
+                common_1.CommonModule,
+                forms_1.ReactiveFormsModule,
+                repeat_module_1.RepeatModule,
+                router_1.RouterModule,
+                quick_form_module_1.QuickFormModule
+            ],
+            exports: [
+                quick_table_component_1.QuickTableComponent,
+                quick_table_column_directive_1.QuickTableColumnDirective,
+                badge_component_1.BadgeComponent,
+                quick_select_component_1.QuickSelectComponent,
+                quick_select_item_directive_1.QuickSelectItemDirective,
+                pagination_component_1.PaginationComponent,
+                smart_table_component_1.SmartTableComponent,
+            ]
+        })
+    ], BNGModule);
     return BNGModule;
 }());
-BNGModule = __decorate([
-    core_1.NgModule({
-        declarations: [
-            quick_table_component_1.QuickTableComponent,
-            quick_table_column_directive_1.QuickTableColumnDirective,
-            badge_component_1.BadgeComponent,
-            quick_select_component_1.QuickSelectComponent,
-            quick_select_item_directive_1.QuickSelectItemDirective,
-            pagination_component_1.PaginationComponent,
-            smart_table_component_1.SmartTableComponent,
-            loader_component_1.LoaderComponent,
-            quick_form_component_1.QuickFormComponent,
-            quick_form_input_component_1.QuickFormInputComponent,
-            quick_form_select_component_1.QuickFormSelectComponent,
-            quick_form_textarea_component_1.QuickFormTextareaComponent,
-            quick_form_buttons_component_1.QuickFormButtonsComponent
-        ],
-        imports: [
-            platform_browser_1.BrowserModule,
-            forms_1.FormsModule,
-            common_1.CommonModule,
-            forms_1.ReactiveFormsModule,
-            repeat_module_1.RepeatModule,
-            router_1.RouterModule
-        ],
-        exports: [
-            quick_table_component_1.QuickTableComponent,
-            quick_table_column_directive_1.QuickTableColumnDirective,
-            badge_component_1.BadgeComponent,
-            quick_select_component_1.QuickSelectComponent,
-            quick_select_item_directive_1.QuickSelectItemDirective,
-            pagination_component_1.PaginationComponent,
-            smart_table_component_1.SmartTableComponent,
-            quick_form_component_1.QuickFormComponent,
-            quick_form_input_component_1.QuickFormInputComponent,
-            quick_form_select_component_1.QuickFormSelectComponent,
-            quick_form_textarea_component_1.QuickFormTextareaComponent,
-            quick_form_buttons_component_1.QuickFormButtonsComponent
-        ]
-    })
-], BNGModule);
 exports.BNGModule = BNGModule;
