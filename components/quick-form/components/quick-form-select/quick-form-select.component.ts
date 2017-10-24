@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ComponentBase} from '../base.component';
-import {QuickFormSelect} from './quick-form-select';
+import {ComponentBase} from '../../../base.component';
+import {QuickFormSelect, QuickFormSelectOption} from './quick-form-select';
 import {QuickFormService} from '../../services/quick-form.service';
 import {FormControl, Validators} from '@angular/forms';
 
@@ -14,7 +14,13 @@ import {FormControl, Validators} from '@angular/forms';
 export class QuickFormSelectComponent extends ComponentBase implements OnInit {
 
 
-    @Input() protected options: QuickFormSelect;
+    @Input() protected label: string;
+    @Input() protected required: boolean;
+    @Input() protected class: string;
+    @Input() protected value: string;
+    @Input() protected data: QuickFormSelectOption;
+    @Input() protected form_control_name: string;
+
 
     constructor(public quick_form_service: QuickFormService) {
         super();
@@ -23,14 +29,17 @@ export class QuickFormSelectComponent extends ComponentBase implements OnInit {
     control: FormControl;
 
     ngOnInit() {
-        console.log(this.options);
-        if (this.options) {
-            this.control = new FormControl(this.options.form_control_name, [
-                Validators.required,
-                Validators.minLength(3),
-                Validators.maxLength(10)
-            ]);
-            this.quick_form_service.toFormControl(this.control);
+
+        if (this.required) {
+            this.control = new FormControl(this.form_control_name,
+                [
+                    Validators.required,
+                ]);
+        } else {
+            this.control = new FormControl(this.form_control_name);
         }
+
+        this.quick_form_service.toFormControl(this.control);
+
     }
 }
