@@ -1,0 +1,8 @@
+<div class="form-group">
+    <label class="form-control-label">{{label}}</label>
+    <select [ngClass]="class" [value]="value" [formControl]="control">
+        <option *ngFor="let option of data; let i = index;" [value]="option.value">{{option.text}}</option>
+    </select>
+    <quick-form-validation [control]="control"></quick-form-validation>
+</div>
+
